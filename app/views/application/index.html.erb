@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Plant Test</title>
+  </head>
+  <body>
+  <div class="container text-center col-md-8">
+    <div class="jombotron shadow p-3 mb-5 bg-white rounded" style="margin-top: 15%">
+      <%= form_for :plants, url:send_array_path do |f| %>
+        <div id="plantSet">
+          <a href="javascript:;" id="addNewItem">Add New Plant</a>
+          <%= render partial: "items_form" %>
+        </div>
+        <div class="actions">
+          <%= f.submit "Results", class: "btn btn-info" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="hide" id="new_items_form">
+    <%= render partial: "items_form", locals: {skill: false} %>
+  </div>
+  </body>
+</html>

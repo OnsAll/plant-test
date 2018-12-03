@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Plant Test</title>
+</head>
+  <body>
+  <div class="container text-center">
+    <div class="jombotron shadow p-3 mb-5 bg-white rounded" style="margin-top: 5%">
+
+      <table border="1" class="table table-striped">
+        <thead>
+        <tr>
+          <% @var.each do |item| %>
+            <th><%= item %></th>
+          <% end %>
+        </tr>
+        </thead>
+      </table>
+      <div> You can remove <h3 class="red"><%= @counter %></h3> plants and the rest would still be in non-descending order!</div>
+      <div class="col-md-3"></div><div><%= button_to 'Back', welcome_path, method: :get, class: "btn btn-info" %></div>
+    </div>
+  </div>
+  </body>
+</html>
